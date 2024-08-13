@@ -3,10 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.greenario</groupId>
-  <artifactId>CropManagement</artifactId>
+  <artifactId>new_weedmanagement</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>kjar</packaging>
-  <name>Crop Management</name>
+  <name>new_weedmanagement</name>
   <description></description>
   <dependencies>
     <dependency>
@@ -44,6 +44,12 @@
       <artifactId>xstream</artifactId>
       <version>1.4.18</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.greenario</groupId>
+      <artifactId>crop-management</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
   <build>
