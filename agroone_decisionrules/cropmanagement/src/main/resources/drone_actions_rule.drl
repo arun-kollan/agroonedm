@@ -1,0 +1,17 @@
+package com.greenario;
+
+import com.greenario.DroneData;
+
+rule "Check Drone Data Actions"
+when
+    $data: DroneData(droneDataHasActions == true)
+then
+    System.out.println("Drone data has direct actions.");
+end
+
+rule "Handle No Drone Data Actions"
+when
+    $data: DroneData(droneDataHasActions == false)
+then
+    System.out.println("No direct actions for drone data.");
+end

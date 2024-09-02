@@ -1,0 +1,217 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.greenario</groupId>
+  <artifactId>crop-management</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>crop-management</name>
+  <url>http://maven.apache.org</url>
+
+
+
+  <dependencies>
+    <!-- JUnit dependency for testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+      <scope>system</scope>
+    </dependency>
+
+    <!-- Drools core dependencies -->
+    <dependency>
+      <groupId>org.kie</groupId>
+      <artifactId>kie-api</artifactId>
+      <version>7.73.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-compiler</artifactId>
+      <version>7.73.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-core</artifactId>
+      <version>7.73.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-decisiontables</artifactId>
+      <version>7.73.0.Final</version>
+    </dependency>
+
+    <!-- Apache HttpClient for making HTTP requests -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.13</version>
+    </dependency>
+
+    <!-- Greenario dependencies -->
+    <dependency>
+      <groupId>com.greenario</groupId>
+      <artifactId>greenario-common-logging</artifactId>
+      <version>8.0.1-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${user.home}/.m2/repository/com/greenario/greenario-common-logging/8.0.1-SNAPSHOT/greenario-common-logging-8.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.greenario</groupId>
+      <artifactId>greenario-common</artifactId>
+      <version>8.0.1-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${user.home}/.m2/repository/com/greenario/greenario-common/8.0.1-SNAPSHOT/greenario-common-8.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.greenario</groupId>
+      <artifactId>agro-one-core</artifactId>
+      <version>8.0.1-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${user.home}/.m2/repository/com/greenario/agro-one-core/8.0.1-SNAPSHOT/agro-one-core-8.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+
+    <!-- Jackson library for JSON processing -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.15.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.15.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.15.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.hateoas</groupId>
+      <artifactId>spring-hateoas</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+
+    <!-- Jakarta Validation API -->
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.greenario</groupId>
+      <artifactId>agroonedm</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+   
+  <dependency>
+    <groupId>com.greenario</groupId>
+    <artifactId>agro-one-spring</artifactId>
+    <version>8.0.1-SNAPSHOT</version> <!-- version is still required -->
+    <scope>system</scope>
+    <systemPath>${user.home}/.m2/repository/com/greenario/agro-one-spring/8.0.1-SNAPSHOT/agro-one-spring-8.0.1-SNAPSHOT.jar</systemPath>
+  </dependency>
+
+    <!-- Spring dependencies -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.ldap</groupId>
+      <artifactId>spring-ldap-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-ldap</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Test dependencies -->
+    <dependency>
+      <groupId>com.greenario</groupId>
+      <artifactId>agro-one-data</artifactId>
+      <scope>system</scope>
+      <systemPath>${user.home}/.m2/repository/com/greenario/agro-one-data/8.0.1-SNAPSHOT/agro-one-data-8.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.greenario</groupId>
+      <artifactId>agro-one-rest-spring-test-lib</artifactId>
+      <scope>system</scope>
+      <systemPath>${user.home}/.m2/repository/com/greenario/agro-one-rest-spring-test-lib/8.0.1-SNAPSHOT/agro-one-rest-spring-test-lib-8.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.unboundid</groupId>
+      <artifactId>unboundid-ldapsdk</artifactId>
+      <scope>system</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${version.assertj}</version>
+      <scope>system</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <scope>system</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>system</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+      <scope>system</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-test</artifactId>
+      <version>${version.spring.security.test}</version>
+      <scope>system</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <source>17</source>
+          <target>17</target>
+        </configuration>
+      </plugin>
+      
+      <!-- Spring Boot Maven Plugin -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <!-- Define repositories here if needed -->
+  </repositories>
+</project>
